@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agenda e Reserva de Ambientes</title>
+        <link rel="stylesheet" href="css/main.css">
+        
+</head>
+    <body>
+        
+        <h1>Agenda</h1>
+        
+        <table id="agenda">
+            <tr>
+                <th>Data</th>
+                <th>Evento</th>
+                <th>Ambiente</th>
+            </tr>
+            
+        </table>
+    
+        <h1>Reserva de Ambientes</h1>
+        <form id="formReserva">
+            <label for="data">Data:</label><br>
+            <input type="date" id="data" name="data"><br>
+            <label for="evento">Evento:</label><br>
+            <input type="text" id="evento" name="evento"><br>
+            <label for="ambiente">Ambiente:</label><br>
+            <input type="text" id="ambiente" name="ambiente"><br>
+            <input type="submit" value="Reservar">
+        </form>
+    
+        <script>
+            {
+            document.getElementById('formReserva').addEventListener('submit', function(e) 
+                e.preventDefault();
+                var data = document.getElementById('data').value;
+                var evento = document.getElementById('evento').value;
+                var ambiente = document.getElementById('ambiente').value;
+                var tabela = document.getElementById('agenda');
+                var linha = tabela.insertRow(-1);
+                var celula1 = linha.insertCell(0);
+                var celula2 = linha.insertCell(1);
+                var celula3 = linha.insertCell(2);
+                celula1.innerHTML = data;
+                celula2.innerHTML = evento;
+                celula3.innerHTML = ambiente;
+            });
+        </script>
+    </body>
+    </html>
