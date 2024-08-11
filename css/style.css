@@ -1,0 +1,28 @@
+body {  
+    font-family: Arial, sans-serif;  
+}  
+
+#dashboard {  
+    border: 1px solid #ccc;  
+    padding: 20px;  
+    border-radius: 10px;  
+}  
+
+.employee-list {  
+    position: fixed;  
+    right: 20px;  
+    top: 100px;  
+    width: 200px;  
+    border: 1px solid #ccc;  
+    padding: 10px;  
+    border-radius: 10px;  
+    background-color: #f9f9f9;  
+}  
+
+.contact-info {  
+    margin-top: 10px;  
+}  
+
+.calendar, .appointments, .visitor-records, .key-records {  
+    margin: 15px 0;  
+}

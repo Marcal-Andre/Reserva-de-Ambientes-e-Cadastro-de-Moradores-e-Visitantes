@@ -1,0 +1,74 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="style.css">  
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>  
+    <title>Condomínio App</title>  
+</head>  
+<body>  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+        <a class="navbar-brand" href="#">Cond-Box 360</a>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
+            <span class="navbar-toggler-icon"></span>  
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarNav">  
+            <ul class="navbar-nav">  
+                <li class="nav-item">  
+                    <a class="nav-link" href="#" onclick="showComponent('chat')">Chat</a>  
+                </li>  
+                <li class="nav-item">  
+                    <a class="nav-link" href="#" onclick="showComponent('schedule')">Reservas</a>  
+                </li>  
+                <li class="nav-item">  
+                    <a class="nav-link" href="#" onclick="showComponent('visitorLog')">Registro de Visitantes</a>  
+                </li>  
+                <li class="nav-item">  
+                    <a class="nav-link" href="#" onclick="showComponent('keyRegistry')">Registro de Chaves</a>  
+                </li>  
+            </ul>  
+        </div>  
+    </nav>  
+
+    <div class="container mt-3">  
+        <div id="dashboard">  
+            <h2>Dashboard</h2>  
+            <div id="calendar" class="calendar">Calendário Estático</div>  
+            <div id="appointments" class="appointments">Agendamentos do Mês</div>  
+            <div id="visitorRecords" class="visitor-records">Registros de Visitantes</div>  
+            <div id="keyRecords" class="key-records">Registros de Chaves</div>  
+        </div>  
+
+        <div id="componentArea"></div>  
+    </div>  
+
+    <div class="employee-list">  
+        <h3>Funcionários</h3>  
+        <ul id="employeeNames">  
+            <li onclick="showContact('funcionario1')">Funcionário 1</li>  
+            <li onclick="showContact('funcionario2')">Funcionário 2</li>  
+            <li onclick="showContact('funcionario3')">Funcionário 3</li> 
+            <li onclick="showContact('funcionario3')">Funcionário 4</li>
+            <li onclick="showContact('funcionario3')">Funcionário 5</li>
+            <li onclick="showContact('funcionario3')">Funcionário 6</li> 
+            <li onclick="showContact('3256-1734')">Portaria 24hr</li>
+        </ul>  
+        <div id="contactInfo" class="contact-info"></div>  
+    </div>  
+
+    <br>
+    <br>
+    <div id="chat">  
+        <input id="username" placeholder="Digite seu nome" />  
+        <textarea id="message" placeholder="Digite sua mensagem"></textarea>  
+        <button onclick="sendMessage()">Enviar</button>  
+        <div id="messages"></div>  
+    </div>
+
+    <script src="app.js"></script>
+    <script>chat.js</script>  
+</body>  
+</html>
